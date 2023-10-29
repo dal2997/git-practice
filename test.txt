@@ -4,3 +4,12 @@ github에 100mb 아래로밖에 못올리는건지. 내가 못올리는건지.
 오예~
 암튼 올리긴함. ㅎ
 - 231029 -
+
+git push -u origin main
+로컬 저장소의 커밋 내역들 원격으로 push(업로드)
+-u 또는 --set-upstream: 현재 브랜치와 명시된 원격 브랜치 기본 연결
+
+대충 내가 이해한 바로는
+
+저장하고(M으로 제목 옆에 바뀜) => git add . => git commit => git push 순서인것 같구..
+add+commit한게 -am인건가?
