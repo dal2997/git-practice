@@ -13,3 +13,8 @@ git push -u origin main
 
 저장하고(M으로 제목 옆에 바뀜) => git add . => git commit => git push 순서인것 같구..
 add+commit한게 -am인건가?
+
+즉,
+변경사항을 ctrl s로 저장한 뒤에
+git commit -am "commit제목지정"
+git push -u origin main
