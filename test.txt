@@ -1,3 +1,6 @@
+https://www.youtube.com/watch?v=1I3hMwQU6GU&t=6776s
+제대로 파는 Git & GitHub - 끝장내기
+
 github에 100mb 아래로밖에 못올리는건지. 내가 못올리는건지.
 이것만 붙잡고 잇으니까 짜증남.
 
@@ -18,3 +21,33 @@ add+commit한게 -am인건가?
 변경사항을 ctrl s로 저장한 뒤에
 git commit -am "commit제목지정"
 git push -u origin main
+
+git push -u origin main
+이걸 명시하는 이유는 한 프로젝트에 원격 저장소가 여러개일수도 있기 때문임.
+
+gitlab이나 gitbuccket?에서 다른 레포지토리를 만든다음에 추가할 수도 잇음. 
+sourcetree에서 원격카테고리에서 볼 수 잇음. 
+git remote치면 이 프로젝트와 연결된 다른 레포지토리를 볼 수 있구요.
+git remote -v 로 자세한 주소까지 확인할 수 있음.
+
+git push -u origin main
+- 로컬 저장소의 커밋 내역들 원격으로 push(업로드)
+- -u 또는 --set-upstream: 현재 브랜치와 명시된 원격 브랜치 기본 연결
+이 명령어를 통해서 현재 브랜치가 디폴트로 어떤 원격에 어떤 브랜치와 연동이 될지를 이걸로 지정해두는거구요. 때문에 이 이후로는 git push만 입력하면 무조건 main에서의 push는 origin의 main branch로 가게 됨.
+
+
+**다운받아서 설치하는 방법**
+2가지 방법이 있음.
+1. code를 클릭해서 download zip을 누름. 
+협업할때 하는 방법은 아님. .git폴더가 없음. 즉, git의 관리내역은 없는것. 
+
+2. 다운로드 받기 원하는 폴더에서 우클릭-더 많은 옵션, 추가옵션표시- git bash here 누르기.
+https를 복사한 뒤에
+git clone 주소복붙
+엔터 누르면. 
+클로닝이란게 이 리포지토리에 있는 모든것, 즉 파일들 뿐만 아니라 git의 관리내역들까지 여러분들의 컴퓨터로 복사를 한다는 이야기에요. 
+vs code에서 새폴더 열기로 열어서 파일들을 확인할 수 있죠? 
+git log를 입력했을 때, 이제까지의 모든 커밋내역들까지 확이할 수 잇습니다. 
+
+4강
+원격으로 커밋 밀어올리기(push)
