@@ -1,4 +1,32 @@
+h1{
+  text-align: center;
+  background-color:aqua;
+}
+
 .glass {
+  align-content: center;
   width: 50%;
   height: 50%;
+}
+p {
+  text-align: center;
+}
+.outline1{
+  color:rgb(3, 69, 47);
+  font-family: 'Grandiflora One', cursive;
+  /* font-family: 'Song Myung', serif; */
+  font-weight: bold;
+}
+
+#intro{
+  display: inline-flex;
+  align-items: flex-end;
+  align-content: center;
+  width: 800px;
+  margin: 0 1rem 1rem 0 ;
+  outline: 5px solid rgba(0,0,0,.2);
+  vertical-align: top;
+  position:relative;
+  border-radius: 10px;
+  padding:20px;
 }
