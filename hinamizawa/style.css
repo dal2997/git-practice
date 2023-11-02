@@ -1,16 +1,60 @@
+
+body{
+  background-color:thistle;
+}
+
+/* .test1{
+  background-color: red;
+  text-align: center;
+  font-weight: bold;
+} */
+
+/* .test2{
+  font-weight: bold;
+  border: 10px solid green;
+  text-align: center;
+} */
+
+.test3{
+  font-weight:bold;
+  text-align:center;
+}
+
+section>nav{
+  border: 10px solid red;
+  width: 100px;
+  text-align: center;
+  display:inline-block;
+}
+
 h1{
   text-align: center;
+  font-size: 3rem;
+  text-decoration: none;
+  color: blue;
   background-color:aqua;
+  letter-spacing: -0.1rem;
 }
 
 .glass {
-  align-content: center;
-  width: 50%;
-  height: 50%;
+  flex-direction: row;
+  display: inline-block;
+
+  /* flex-wrap: wrap;
+  justify-content: center; */
+
+  border: 10px solid gold;
+  margin-bottom: 20px;
 }
+img{
+  align-content:center;
+  width:500px;
+}
+
 p {
   text-align: center;
 }
+
 .outline1{
   color:rgb(3, 69, 47);
   font-family: 'Grandiflora One', cursive;
@@ -19,14 +63,14 @@ p {
 }
 
 #intro{
-  display: inline-flex;
-  align-items: flex-end;
-  align-content: center;
+  display: inline-block;
+  /* align-items: flex-end;
+  align-content: center; */
   width: 800px;
-  margin: 0 1rem 1rem 0 ;
+  margin: 50rem 1rem 1rem 0 ;
   outline: 5px solid rgba(0,0,0,.2);
   vertical-align: top;
-  position:relative;
+  position:absolute;
   border-radius: 10px;
   padding:20px;
 }
