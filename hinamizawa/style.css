@@ -74,3 +74,27 @@ p {
   border-radius: 10px;
   padding:20px;
 }
+
+/* 4(div>a)+(section>a*7)
+div{
+  text-align:center; 
+  //인라인은 부모한테 글자취급당한다.따라서 a는 글자취급당함. inline자체에, 즉 a안에 text-aline을 걸면 인라인인 a에는 정렬할 공간 자체가 없숨..
+  border: 10px solid pink;
+  display:inline-block;//인라인 블록을 주면 너비가 최소화된다. 그래서 text-align:center가 안먹는다.너비를 크게 추가로 주지 않는이상 a가 정렬될 여지가 없음. 그래서 인라인블록과 센터를 같이 준다는 의미가 없는거임.
+}
+  a{
+    color:black;
+    text-decoration:none;
+  }
+  div>a{
+    font-weight:bold;
+    font-size:4rem;
+    letter-spacing:-0.4rem;
+    background-color:red;
+  }
+  section{
+    font-weight:bold;
+  } */
+
+
+  
