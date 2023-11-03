@@ -15,17 +15,10 @@ body{
   text-align: center;
 } */
 
-.test3{
+/* .test3{
   font-weight:bold;
   text-align:center;
-}
-
-section>nav{
-  border: 10px solid red;
-  width: 100px;
-  text-align: center;
-  display:inline-block;
-}
+} */
 
 h1{
   text-align: center;
@@ -36,19 +29,26 @@ h1{
   letter-spacing: -0.1rem;
 }
 
+div{
+  border:10px solid green;
+  width:100px;
+}
+
 .glass {
   flex-direction: row;
   display: inline-block;
 
   /* flex-wrap: wrap;
   justify-content: center; */
-
   border: 10px solid gold;
   margin-bottom: 20px;
 }
+
+/*  이미지 태그는 인라인블록인데 특이하게 너비는 먹음. 이미지 고유의 사이즈가 있음. */
 img{
-  align-content:center;
-  width:500px;
+  width:800px;
+  object-fit:cover;
+  border: 10px solid salmon;
 }
 
 p {
@@ -96,5 +96,32 @@ div{
     font-weight:bold;
   } */
 
+a{
+  color:black;
+  text-decoration:none;
 
-  
+}
+div > a{
+  font-weight:bold;
+  font-size: 4rem;
+  letter-spacing:-0.3rem;
+}
+
+section{
+  font-weight:bold;
+  text-align:center;
+}
+
+section > nav{
+  border: 10px solid slateblue;
+  display:inline-block;
+  width: 180px;
+}
+
+section > nav > a {
+  background-color:red;
+  display:block;
+  }
+section > nav > a:hover{
+  color:azure;
+  }
