@@ -1,0 +1,121 @@
+https://www.youtube.com/watch?v=8EWwyAcqR6o
+웹사이트 로딩이 더 빨라지는 매직? 🍯 꿀팁 공유 10분컷!
+
+<picture> tag
+
+WebP,
+JPEG XL,
+AVIF
+와 같은 형식들이 있음.
+
+웹사이트를 항상 최적화해야 함.
+화면크기, 브라우저 지원, 파일크기, 다운로드 속도 등을 염두에 두어야 함.
+
+이미지가 로드되는 방식을 최적화하고 싶으면,
+가장 먼저 할 수 있는 일은 브라우저에서 이미지를 로드하는 방법과 시기를 변경하는 것이야.
+이를 위해 'loading' 속성을 'lazy'로 설정하면 됨.
+<img src="cat.jpg" loading="lazy"/>
+이렇게 하면 브라우저에 이미지를 즉시 로드하지 않고 
+유저가 실제로 이미지를 볼 때만 로드할 수 있어.
+유저가 스크롤 할 때 네트워크 패널에서 브라우저가 
+모든 이미지를 한꺼번에 로드하는 대신 
+각 이미지를 하나씩 가져오는 것을 볼 수 있어.
+이렇게 하면 유저가 실제로 보게 될 이미지만 로드할 수 있어.
+유저는 빈 사각형이나 로딩 이미지를 보지 않겠지. 
+lazy 로딩을 사용하면 웹사이트 로딩 속도가 빨라질 수 있지만,
+유저에게 제공하는 이미지 크기에 대해 고려해야해.
+lazy로딩을 사용하더라도 이미지 크기가 최적화되지 않으면
+웹사이트가 느리게 로딩되거든.
+다행히도 'img' 요소를 사용하면 
+유저에게 고화질 이미지를 표시할 때와, 작은 이미지를 표시할 때를 선택할 수 있어서 
+유저에게 필요한 이미지만 제공할 수 잇어.
+바로 'srcset' 및 'sizes' 속성을 사용하면 됨.
+
+'srcset'을 사용하면 장치마다 로드할 이미지를 다르게 정의할 수 있어.
+이걸 사용하면 화면이 작은 모바일 기기에는 더 작은 저해상도 이미지를 로드하고 
+화면이 큰 데스크톱 컴퓨터에는 더 큰 HD 이미지를 로드할 수 있지.
+각 디바이스에서 가장 적합한 이미지를 로드하도록 선택할 수 있어서 
+웹사이트 로딩 속도가 빨라져.
+
+<img 
+	srcset="cat-small.jpg 500w,
+		cat-medium.jpg 1000w,
+		cat-large.jpg 2000w"
+	scr="cat-small.jpg"	/>
+=> w는 wide를 의미함. 
+화면의 크기에 따라서 이미지를 달리할 수 있음.
+
+<img 
+	srcset="cat-small.jpg 500w,
+		cat-medium.jpg 1000w,
+		cat-large.jpg 2000w"
+	sizes="(max-width:600px) 400px,
+		(max-width: 1200px) 800px,
+		1400px"
+	scr="cat-small.jpg"	/>
+=> 600px이하면 400px를 출력하고
+1200px이하면 800px 출력.
+
+<picture>요소 안에 여러 개의 'source'요소를 넣을 수 있고,
+
+<picture>
+	<source/>
+	<source/>
+	<img/>
+</picture>
+
+브라우저는 각 'source' 요소를 살펴보고
+지정한 조건과 일치하는 요소를 표시할 거야.
+
+<picture>
+	<source srcset="/cat-vertical.jpg"
+	media="(orientation: portrait)">
+	<source srcset="/cat-horizontal.jpg"
+	media="(orientation: landscape)">
+	<img src="/cat-default.jpg">
+</picture>
+=>여기에는 두개의 'source' 요소가 있는 'picture' 요소가 있어.
+첫번째 소스 태그는 'cat-vertical.jpg'
+즉 기기의 방향이 세로일 때 사용되는 이미지를 가리키고 잇어.
+media 속성(방향: 세로)은 이 조건을 지정하지.
+두 번째 소스 태그는 기기의 방향이 가로일 때
+사용되는 이미지 'cat-horizontal.jpg'를 가리키고 있어.
+이는 'media'속성(방향: 가로)으로 지정되지.
+마지막으로 'src'속성이  'cat-default.jpg'로 설정된 'img'태그가 있어.
+이 태그는 소스 태그의 조건이 모두 충족되지 않거나 
+브라우저가 사진 및 소스 태그를 지원하지 않는 경우에
+사용되는 대체 태그 역할을 해.
+'source' 요소의 'media'속성에는 원하는 CSS 미디어 쿼리를 작성할 수 있어.
+유저의 화면 크기에 따라 다른 이미지를 표시해
+
+
+다크모드, 라이트 모드에따라서도 달리할 수 있음.
+<picture>
+	<source srcset="dark-cat.jpg" media="(prefers-color-scheme: dark)">
+	<img src="light-cat.jpg">
+</picture>
+
+<picture>
+	<source srcset="high-definition.jpg" media="(min-resolution:2dppx)">
+	<img src="low-definition.jpg">
+</picture>
+
+
+
+JPEG XL은 압축률이 더 우수하고 JPEG, PNG, GIF를 대체하도록 설계되었지만
+JPEG, PNG, GIF
+대부분의 브라우저에서 지원되지는 않아.
+WebP는  Google에서 개발했으며 상당히 잘 지원되며 
+JPEG, PNG, GIF를 대체하도록 설계되었지.
+Google에 따르면 평균 WebP 파일 크기는 동일한 품질의 JPEG 파일에 비해 25~34% 작아.
+AVIF는 AV1 비디오 코덱에서 파생되었어. 
+일부 테스트에서 AVIF는 비슷한 체감 품질로
+JPEG에 비해 파일 크기를 50% 절약할 수 있었다고해.
+AVIF는 애니메이션도 지원하므로 GIF를 대체할 수 있고,
+투명 이미지도 지원하므로 PNG를 대체할 수 잇어.
+WebP만큼 잘 지원되지는 않지만 점점 나아지고 있어.
+
+
+
+
+

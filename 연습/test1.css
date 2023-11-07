@@ -1,0 +1,33 @@
+/* div{
+  text-align:center;
+  border:10px solid red;
+  width: 200px;
+  height: 500px;
+  display:inline-block;
+  vertical-align: top;
+  padding: 50px;
+  margin: 50px;
+}
+div > img{
+  width:200px;
+}
+div > article{
+  width:20px;
+  height:20px;
+*/
+
+  /* background-color:black;
+  display:inline-block;*/ /*article은 기본적으로 블록이다.그래서 한줄 혼자 씀.*/
+
+section{
+  border: 10px solid red;
+  text-align: center;
+}
+section>div{
+  border:10px solid green;
+  display: inline-block;
+  padding: 10px;
+}
+section>div>img{
+  width: 300px;
+}

@@ -1,0 +1,13 @@
+npm
+nodejs
+DOM library
+webpack vite turbopack snowpack rollup
+typescript
+single page application
+react vue angular svelte solid
+nextjs nuxtjs sveltekit remix
+state management
+server side rendering
+client side rendering
+build/ bundling
+serverless/edge
