@@ -31,3 +31,11 @@ section>div{
 section>div>img{
   width: 300px;
 }
+
+a{
+  background-color: aqua;
+  border: red 10px solid;
+  margin: 10px;
+  display:block;
+  text-align:center;
+}

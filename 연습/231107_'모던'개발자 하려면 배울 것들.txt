@@ -11,3 +11,33 @@ server side rendering
 client side rendering
 build/ bundling
 serverless/edge
+
+
+npm 설치하면 라이브러리파일
+js라이브러리 webpack으로 줄일 수 있음.
+
+npm install 설치하고싶은 라이브러리.
+
+번들링 툴(vite)
+
+js 라이브러리
+vue svelte react angular
+html생성, 구조변경 편함.
+단점: 변수 관리 어려움.
+라이브러리 설치해서 해결...
+구글검색결과 노출 어려움,
+첫 로딩 속도 저하.
+
+타입스크립트
+타입 기능 업글된 자바스크립트
+bundling tool로 .js로 변경해야 함.
+
+서버있어야 되는데 없으면
+서버리스..사용하기.
+
+프론트 붐
+라이브러리 많이 공부하면 좋음.
+
+
+
+

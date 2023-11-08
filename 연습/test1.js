@@ -97,7 +97,7 @@ console.log(multiRs);
 let divideRs = divide(5,10);
 console.log(divideRs);
 */
-
+/*
 function print_1_to_100{
   for (let i = 1; i<=100; i++);
   console.log(i);
@@ -112,17 +112,38 @@ function printNToM(n, m){
   for (let i = n; i<=m; i++);
   console.log(i);
 }
-
 printNToM(3,5);
+*/
+/*
+function get1ToNSum(n){
+  let s = 0;
 
-
-function get1To3Sum(s){
-  /*s=s+1;
-  s=s+2;
-  s=s+3;*/
-  i=0;
-  s=s+i;
-  i++;
+  for(let i = 1; i<= n; i++){
+    s+=i;
+  }
   return s;
 }
-console.log(get1To3Sum(10));
+console.log(get1ToNSum(10));
+*/
+
+function getNToMSum(n,m){
+  let s = 0;
+  for(let i = n; i<= m; i++){
+    s+=i;
+  }
+  return s;
+}
+console.log(getNToMSum(1,6));
+
+function getNToMEvenSum(n,m){
+  let s = 0;
+  for(let i = n; i<= m; i++){
+    if(i%2==0){
+      s+=i;
+    }
+  }
+  return s;
+}
+
+console.log(getNToMEvenSum(1,6));
+
