@@ -1,0 +1,57 @@
+
+/*inherit*/
+section,div,article{
+  border: 10px solid black;
+  padding:50px;
+  margin: 50px;
+}
+section > div{
+  border-color: pink;
+}
+section > div > article{
+  border-color: greenyellow;
+  color:aquamarine;
+}
+section{
+  color:red;
+  font-size: 5rem;
+  font-weight:bold;
+  background-color: gold; /*div와article이 배경이 투명이라! 바뀐것처럼 보인것.*/
+  width: 1500px;
+  height: 2000px;
+  /*웬만하면 한 줄을 다 쓰려는 성질때문에 늘어난거지.너비는 상속되지 않습니다.*/
+  text-align: center;
+}
+section>div{
+  color:brown;
+  text-align: left;
+}
+
+/*
+font-size 상속O
+font-weight 상속O
+color 상속O
+background-color(transparent)
+text-align 상속O
+width(auto)
+height(auto)
+*/
+
+a{
+  text-decoration: none;
+  font-size:10rem;
+  border: 10px solid blue;
+  border-radius: 100px;
+  color: brown;
+}
+/*
+div{
+  width:200px;
+  height:200px;
+  border:20px solid green;
+  padding: 20px;
+  box-sizing: border-box;너비,높이가 200px로 갇히는것. 이걸안하면 실제와는조금다른.
+}
+*/
+
+
