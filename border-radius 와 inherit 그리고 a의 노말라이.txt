@@ -14,3 +14,53 @@ jquery는 내장된것은 아님.
 #js
 $('div');
 $는 검색하다는 함수라고 생각하면됨.
+
+=html=
+<div>
+  <section></section>
+  <section>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+  </section>    
+
+=javascript=
+var navs = document.getElementsByTagName('nav');
+for(var i = 0; i<navs.length;i++){
+  navs[i].style.backgroundColor='pink';
+}
+=>jquery로 바꿀경우=  단, <script src="~"></script>를 html에 추가해줘야 함.jquery 소스 추가
+var navs = $('nav');
+navs.css('background-color','red');
+//navs를 교장선생님으로 볼 수 있는데
+관례적으로 navs 앞에 $를 붙인다. 교장선생님은 $navs
+교장선생님이 알아서 nav를 찾아서 바꿔주심.
+=>
+var $navs = $('nav');
+$navs.css('background-color','red');
+===================
+
+=html=
+<script src="~"></script>
+<button onclick="배경변경();">배경색 변경
+<div>
+  <section></section>
+  <section>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+    <nav></nav>
+  </section>    
+
+=js=
+function 배경변경(){
+  $('body').css('background-color', 'green);
+}
+
+var $navs = $('nav');
+$navs.css('background-color','red');
+
+
+
+
