@@ -1,0 +1,21 @@
+CI/CD 5분 개념 정리 (현업에서 쓰는 개발 프로세스)
+https://www.youtube.com/watch?v=0Emq5FypiMM
+드림코딩
+
+ci(continuous integration_지속적 통합)
+1. 코드 변경사항을 주기적으로 빈번하게 머지해야 한다.
+2. 통합을 위한 단계(빌드,테스트,머지)의 자동화_코드의 퀄리티 향상,개발생산성 향상/버그수정용이,문제점을 빠르게 발견
+//이렇게 ci를 잘 운영하기 위해서는 모든 개발자들이 자신이 새로 작성하는 코드에서는 유니테스트를 꼭 포함해야함. ci를 사용한다면 우리 프로젝트의 대부분의 소스코드들이 자동으로 테스트가 될 수 있도록 만들기 때문에 조금더 안정성있는 제품을 개발가능.
+
+cd(continuous delivery_지속적 제공)
+code-build-test-realease-deploy
+
+cd(or continuous deployment_지속적 배포 로 사용하는 경우도 있어요.)
+
+
+Jenkins
+Buildkite
+GitHub Action
+GitLab CI/CD
+BitBucket Pipeline
+circleci
